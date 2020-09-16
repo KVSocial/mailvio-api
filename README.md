@@ -104,6 +104,736 @@ try {
 }
 
 ```
+# **addContactToList**
+> \Swagger\Client\Model\PostContactInfo addContactToList($list_id, $contact_emails)
+
+Add existing contacts to a list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$list_id = 789; // int | Id of the list
+$contact_emails = new \Swagger\Client\Model\AddContactToList(); // \Swagger\Client\Model\AddContactToList | Emails addresses of the contacts
+
+try {
+    $result = $api_instance->addContactToList($list_id, $contact_emails);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->addContactToList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+# **createAttribute**
+> createAttribute($attribute_category, $attribute_name, $create_attribute)
+
+Creates contact attribute
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$attribute_category = "attribute_category_example"; // string | Category of the attribute
+$attribute_name = "attribute_name_example"; // string | Name of the attribute
+$create_attribute = new \Swagger\Client\Model\CreateAttribute(); // \Swagger\Client\Model\CreateAttribute | Values to create an attribute
+
+try {
+    $api_instance->createAttribute($attribute_category, $attribute_name, $create_attribute);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->createAttribute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **createContact**
+> \Swagger\Client\Model\CreateUpdateContactModel createContact($create_contact)
+
+Create a contact
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$create_contact = new \Swagger\Client\Model\CreateContact(); // \Swagger\Client\Model\CreateContact | Values to create a contact
+
+try {
+    $result = $api_instance->createContact($create_contact);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->createContact: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+# **createFolder**
+> \Swagger\Client\Model\CreateModel createFolder($create_folder)
+
+Create a folder
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$create_folder = new \Swagger\Client\Model\CreateUpdateFolder(); // \Swagger\Client\Model\CreateUpdateFolder | Name of the folder
+
+try {
+    $result = $api_instance->createFolder($create_folder);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->createFolder: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **createList**
+> \Swagger\Client\Model\CreateModel createList($create_list)
+
+Create a list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$create_list = new \Swagger\Client\Model\CreateList(); // \Swagger\Client\Model\CreateList | Values to create a list
+
+try {
+    $result = $api_instance->createList($create_list);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->createList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **deleteAttribute**
+> deleteAttribute($attribute_category, $attribute_name)
+
+Deletes an attribute
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$attribute_category = "attribute_category_example"; // string | Category of the attribute
+$attribute_name = "attribute_name_example"; // string | Name of the existing attribute
+
+try {
+    $api_instance->deleteAttribute($attribute_category, $attribute_name);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->deleteAttribute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **deleteContact**
+> deleteContact($email)
+
+Deletes a contact
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$email = "email_example"; // string | Email (urlencoded) of the contact
+
+try {
+    $api_instance->deleteContact($email);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->deleteContact: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **deleteFolder**
+> deleteFolder($folder_id)
+
+Delete a folder (and all its lists)
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$folder_id = 789; // int | Id of the folder
+
+try {
+    $api_instance->deleteFolder($folder_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->deleteFolder: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **deleteList**
+> deleteList($list_id)
+
+Delete a list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$list_id = 789; // int | Id of the list
+
+try {
+    $api_instance->deleteList($list_id);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->deleteList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **getAttributes**
+> \Swagger\Client\Model\GetAttributes getAttributes()
+
+Lists all attributes
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+
+try {
+    $result = $api_instance->getAttributes();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->getAttributes: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **getContactInfo**
+> \Swagger\Client\Model\GetExtendedContactDetails getContactInfo($email)
+
+Retrieves contact informations
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$email = "email_example"; // string | Email (urlencoded) of the contact OR its SMS attribute value
+
+try {
+    $result = $api_instance->getContactInfo($email);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->getContactInfo: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **getContactStats**
+> \Swagger\Client\Model\GetContactCampaignStats getContactStats($email)
+
+Get the campaigns statistics for a contact
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$email = "email_example"; // string | Email address (urlencoded) of the contact
+
+try {
+    $result = $api_instance->getContactStats($email);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->getContactStats: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+# **getContacts**
+> \Swagger\Client\Model\GetContacts getContacts($limit, $offset, $modified_since)
+
+Get all the contacts
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$limit = 50; // int | Number of documents per page
+$offset = 0; // int | Index of the first document of the page
+$modified_since = new \DateTime(); // \DateTime | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
+
+try {
+    $result = $api_instance->getContacts($limit, $offset, $modified_since);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->getContacts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **getContactsFromList**
+> \Swagger\Client\Model\GetContacts getContactsFromList($list_id, $modified_since, $limit, $offset)
+
+Get the contacts in a list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$list_id = 789; // int | Id of the list
+$modified_since = new \DateTime(); // \DateTime | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
+$limit = 50; // int | Number of documents per page
+$offset = 0; // int | Index of the first document of the page
+
+try {
+    $result = $api_instance->getContactsFromList($list_id, $modified_since, $limit, $offset);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->getContactsFromList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **getFolder**
+> \Swagger\Client\Model\GetFolder getFolder($folder_id)
+
+Returns folder details
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$folder_id = 789; // int | id of the folder
+
+try {
+    $result = $api_instance->getFolder($folder_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->getFolder: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+# **getFolderLists**
+> \Swagger\Client\Model\GetFolderLists getFolderLists($folder_id, $limit, $offset)
+
+Get the lists in a folder
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$folder_id = 789; // int | Id of the folder
+$limit = 10; // int | Number of documents per page
+$offset = 0; // int | Index of the first document of the page
+
+try {
+    $result = $api_instance->getFolderLists($folder_id, $limit, $offset);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->getFolderLists: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+# **getFolders**
+> \Swagger\Client\Model\GetFolders getFolders($limit, $offset)
+
+Get all the folders
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$limit = 10; // int | Number of documents per page
+$offset = 0; // int | Index of the first document of the page
+
+try {
+    $result = $api_instance->getFolders($limit, $offset);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->getFolders: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+# **getList**
+> \Swagger\Client\Model\GetExtendedList getList($list_id)
+
+Get the details of a list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$list_id = 789; // int | Id of the list
+
+try {
+    $result = $api_instance->getList($list_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->getList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+# **getLists**
+> \Swagger\Client\Model\GetLists getLists($limit, $offset)
+
+Get all the lists
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$limit = 10; // int | Number of documents per page
+$offset = 0; // int | Index of the first document of the page
+
+try {
+    $result = $api_instance->getLists($limit, $offset);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->getLists: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **importContacts**
+> \Swagger\Client\Model\CreatedProcessId importContacts($request_contact_import)
+
+Import contacts
+
+It returns the background process ID which on completion calls the notify URL that you have set in the input.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$request_contact_import = new \Swagger\Client\Model\RequestContactImport(); // \Swagger\Client\Model\RequestContactImport | Values to import contacts in Mailvio. To know more about the expected format, please have a look at ``https://help.api.mailvio.com/hc/en-us/articles/209499265-Build-contacts-lists-for-your-email-marketing-campaigns``
+
+try {
+    $result = $api_instance->importContacts($request_contact_import);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->importContacts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+# **removeContactFromList**
+> \Swagger\Client\Model\PostContactInfo removeContactFromList($list_id, $contact_emails)
+
+Remove existing contacts from a list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$list_id = 789; // int | Id of the list
+$contact_emails = new \Swagger\Client\Model\RemoveContactFromList(); // \Swagger\Client\Model\RemoveContactFromList | Emails adresses of the contact
+
+try {
+    $result = $api_instance->removeContactFromList($list_id, $contact_emails);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->removeContactFromList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+# **requestContactExport**
+> \Swagger\Client\Model\CreatedProcessId requestContactExport($request_contact_export)
+
+Export contacts
+
+It returns the background process ID which on completion calls the notify URL that you have set in the input. File will be available in csv.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$request_contact_export = new \Swagger\Client\Model\RequestContactExport(); // \Swagger\Client\Model\RequestContactExport | Values to request a contact export
+
+try {
+    $result = $api_instance->requestContactExport($request_contact_export);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->requestContactExport: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **updateAttribute**
+> updateAttribute($attribute_category, $attribute_name, $update_attribute)
+
+Updates contact attribute
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$attribute_category = "attribute_category_example"; // string | Category of the attribute
+$attribute_name = "attribute_name_example"; // string | Name of the existing attribute
+$update_attribute = new \Swagger\Client\Model\UpdateAttribute(); // \Swagger\Client\Model\UpdateAttribute | Values to update an attribute
+
+try {
+    $api_instance->updateAttribute($attribute_category, $attribute_name, $update_attribute);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->updateAttribute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+# **updateContact**
+> updateContact($email, $update_contact)
+
+Updates a contact
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$email = "email_example"; // string | Email (urlencoded) of the contact
+$update_contact = new \Swagger\Client\Model\UpdateContact(); // \Swagger\Client\Model\UpdateContact | Values to update a contact
+
+try {
+    $api_instance->updateContact($email, $update_contact);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->updateContact: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **updateFolder**
+> updateFolder($folder_id, $update_folder)
+
+Update a contact folder
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$folder_id = 789; // int | Id of the folder
+$update_folder = new \Swagger\Client\Model\CreateUpdateFolder(); // \Swagger\Client\Model\CreateUpdateFolder | Name of the folder
+
+try {
+    $api_instance->updateFolder($folder_id, $update_folder);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->updateFolder: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+
+# **updateList**
+> updateList($list_id, $update_list)
+
+Update a list
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api-key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api-key', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\ContactsApi();
+$list_id = 789; // int | Id of the list
+$update_list = new \Swagger\Client\Model\UpdateList(); // \Swagger\Client\Model\UpdateList | Values to update a list
+
+try {
+    $api_instance->updateList($list_id, $update_list);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->updateList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
 
 ## Documentation for API Endpoints
 
