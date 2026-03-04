@@ -125,8 +125,39 @@ composer install
 composer test
 ```
 
-## Migration
+## Verification (3 Layers)
 
-This release is a breaking major reset from the legacy Swagger client.
+Use all three checks before release:
 
-See [docs/MIGRATION.md](docs/MIGRATION.md) for changes and upgrade notes.
+1. Spec-sync check
+
+Regenerate wrappers and confirm no drift from `docs/API`:
+
+```bash
+composer run generate-sdk
+git diff -- src/Generated/Operations.php src/Generated/OperationMethods.php
+```
+
+2. Automated test check
+
+Run unit + contract tests:
+
+```bash
+composer test
+```
+
+3. Real API smoke check
+
+Run one authenticated live endpoint with a real token:
+
+```bash
+MAILVIO_TOKEN='your_token' php -r '
+require "vendor/autoload.php";
+$client = new Mailvio\Api\MailvioClient(
+    new Mailvio\Api\ClientConfig(accessToken: getenv("MAILVIO_TOKEN"))
+);
+$res = $client->retrieveAllApiKeys();
+echo "HTTP ".$res->getStatusCode().PHP_EOL;
+var_export($res->getBody());
+'
+```
